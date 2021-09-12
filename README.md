@@ -1,2 +1,2 @@
-# gerenciadorDeCadastro
-Gerenciador de cadastro de celular. Teste paga vaga de front-end.
+# Gerenciador de Cadastro.
+Gerenciador de cadastro de celulares.
