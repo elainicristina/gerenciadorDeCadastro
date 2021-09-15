@@ -4,23 +4,24 @@ import axios from "axios";
 import {urlBase} from "../Constants/url";
 import { headers } from "../Constants/url";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './heade/heade';
+import Header from '../Constants/heade/heade';
 import { TableStyled, ButtonStyled } from '../Constants/style/tableHome';
-import { goToAdicionar } from '../Routes/coodinator';
-import { useHistory } from "react-router-dom"
+import { goToAdd } from '../Routes/Cordinator';
+import { useHistory } from 'react-router-dom';
+import DetalhesPage from './detalhes';
+
 const HomePage = () => {
 
     const history = useHistory();
 
-
     const [listaCell, setListaCell] = useState([])
+
 
     const getLIsta = () => {
         axios.get(`${urlBase}/phone`, {
             headers: headers
         })
         .then((res) => {
-            console.log(res.data)
             setListaCell(res.data)
         })
         .catch((error) => alert(error));
@@ -34,7 +35,7 @@ const HomePage = () => {
                 <table class="table">
                     <tbody>
                         <tr>
-                        <td>{list._id}</td>
+                        <td><button onClick={DetalhesPage} >{list._id}</button></td>
                         <td>{list.model}</td>
                         <td>{list.price}</td>
                         <td>{list.brand}</td>
@@ -55,8 +56,14 @@ const HomePage = () => {
     return (
         <div>
             {Header()}
-
-           <button onClick={()=> goToAdicionar(history)} >Adicionar</button>
+            <ButtonStyled>
+                 <button type="button" 
+                 class="btn btn-secondary btn-lg"
+                  onClick={() => goToAdd(history)} 
+                  > Adicionar
+                </button>
+            </ButtonStyled>
+          
 
             <TableStyled>
             <table class="table">

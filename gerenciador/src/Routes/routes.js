@@ -6,29 +6,28 @@ import EditarPage from "../Pages/editar";
 import DetalhesPage from '../Pages/detalhes'
 
 const Routes = () => {
+
     return (
          <BrowserRouter>
 
-        <Switch>
-            <Route exact path={"/"} >
-                <HomePage/> 
-            </Route>
+            <Switch>
+                <Route exact path="/" >
+                    <HomePage/> 
+                </Route>
 
-            <Route path={"/adicionar"}  >
+                <Route path={"/adicionar"}  >
 
-                <AdicionarPage/>
-            </Route>
+                    <AdicionarPage/>
+                </Route>
 
-            <Route path={"/editar"} exact>
-                <EditarPage/>
-            </Route>
+                <Route path={"/editar"} >
+                    <EditarPage/>
+                </Route>
 
-            <Route path={"/detalhes/:id"} exact >
-                <DetalhesPage/>
-            </Route>
+                <Route path={"/detalhes/:_id"} component={DetalhesPage}/>
 
-        </Switch>
-    </BrowserRouter>
+            </Switch>
+        </BrowserRouter>
     )
    
 }

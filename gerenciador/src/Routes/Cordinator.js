@@ -2,9 +2,8 @@
 export const goToHome = (history) => {
   history.push("/");
 };
-
-export const goToAdicionar = (history) => {
-  history.push('/adicionar')
+export const goToAdd = (history) => {
+  history.push("/adicionar");
 };
 
 export const goToEditar = (history) => {

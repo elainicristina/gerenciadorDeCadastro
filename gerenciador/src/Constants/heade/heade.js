@@ -2,7 +2,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../img/logo.png'
-import { goToHome } from '../../Routes/coodinator';
+import { goToHome } from '../../Routes/Cordinator';
 import { useHistory } from 'react-router';
 
 
