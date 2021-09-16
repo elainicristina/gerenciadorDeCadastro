@@ -3,8 +3,8 @@ Gerenciador de cadastro de celulares.
 
 # Link demo:
 
-(ubiquitous-digestion.surge.sh
-)
+ubiquitous-digestion.surge.sh
+
 
 # Funcionalidades:
 
