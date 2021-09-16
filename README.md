@@ -3,7 +3,8 @@ Gerenciador de cadastro de celulares.
 
 # Link demo:
 
-[gerenciadorcelulares.com](pathetic-rail.surge.sh)
+[gerenciadorcelulares.com](ubiquitous-digestion.surge.sh
+)
 
 # Funcionalidades:
 
