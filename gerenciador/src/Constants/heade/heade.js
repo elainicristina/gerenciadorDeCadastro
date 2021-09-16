@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../img/logo.png'
 import { goToHome } from '../../Routes/Cordinator';
 import { useHistory } from 'react-router';
+import { Img } from '../style/renderizandoTela';
 
 
 
@@ -13,7 +14,7 @@ const Header = () => {
     return (
         <div onClick={() => goToHome(history)}>
         <nav class="navbar navbar-light bg-light">
-            <img src={logo} width="50" height="50" alt="Imagem de celular"/>
+            <Img src={logo} width="80" height="70" alt="Imagem de celular"/>
         </nav>
         </div>
     )

@@ -15,17 +15,16 @@ const Routes = () => {
                     <HomePage/> 
                 </Route>
 
-                <Route path={"/adicionar"}  >
+                <Route exact path={"/adicionar"}  >
 
                     <AdicionarPage/>
                 </Route>
 
-                <Route path={"/editar"} >
-                    <EditarPage/>
-                </Route>
+                <Route exact path={"/editar/:id"} component={EditarPage} />
 
-                <Route path={"/detalhes/:_id"} component={DetalhesPage}/>
-
+                <Route exact path={"/detalhes/:id"} component={DetalhesPage}/>
+                
+                
             </Switch>
         </BrowserRouter>
     )
