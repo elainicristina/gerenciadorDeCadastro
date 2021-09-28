@@ -5,9 +5,11 @@ export const formatFromBrToUs = (date) => {
 }
 
 export const formatDate = (date) => {
-    const [year, mounth, day] = date.split('-')
-    const newDate = `${day}/${mounth}/${year}`
-    return newDate;
+    if (date) {
+        const [year, mounth, day] = date.split('-')
+        const newDate = `${day}/${mounth}/${year}`
+        return newDate;
+    }
 }
 
 export const getDateFromTimestamp = (timestamp) => {

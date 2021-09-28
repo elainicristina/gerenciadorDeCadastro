@@ -1,5 +1,5 @@
 import axios from "axios"
-import { URL, headers } from "../Constants/url"
+import { URL, headers } from "../constants/url"
 import { formatDate } from '../utils/date';
 
 export class PhoneService {

@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 
 import TableHead from '@material-ui/core/TableHead';
@@ -7,12 +7,11 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
 
-
-import Header from '../Constants/heade/heade';
-import { NomeInicio } from '../Constants/style/renderizandoTela';
-import { CenterTable } from '../Constants/style/renderizandoTela';
-import { ButtonHome } from '../Constants/style/buttonNone';
-import { goToHome } from '../Routes/Cordinator';
+import Header from '../components/header';
+import { NomeInicio } from '../constants/style/renderizandoTela';
+import { CenterTable } from '../constants/style/renderizandoTela';
+import { ButtonHome } from '../constants/style/buttonNone';
+import { goToHome } from '../routes/cordinator';
 import { PhoneService } from '../services/phone';
 import { formatDateFromTimestamp } from '../utils/date';
 

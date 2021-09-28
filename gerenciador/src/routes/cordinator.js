@@ -14,4 +14,3 @@ export const goToDetalhes = (history, id) => {
 export const goToEditar = (history, id) => {
   history.push("/editar/" + id);
 }
-
