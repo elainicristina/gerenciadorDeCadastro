@@ -11,8 +11,8 @@ import { useForm } from 'react-hook-form';
 
 const AdicionarPage = () => {
 
-    const { register, formState: { errors }, handleSubmit, getValues, watch } = useForm();
-    const [ startDate, setStartDate ] = useState('')
+    const { register, formState: { errors }, handleSubmit, watch } = useForm();
+
     const history = useHistory()
 
     const addCell = (form) => {
@@ -40,7 +40,6 @@ const AdicionarPage = () => {
     }
 
     const onSubmit = (data) => {
-        console.log(data)
         addCell(data)
     }
 

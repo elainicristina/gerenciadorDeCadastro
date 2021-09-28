@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from  'react'
 import { useHistory } from 'react-router-dom';
+import { PhoneService } from '../services/phone';
 
 import BorderColorIcon from '@material-ui/icons/BorderColor';
 import ClearIcon from '@material-ui/icons/Clear';
@@ -8,10 +9,11 @@ import { LinearProgress } from '@material-ui/core';
 
 import Header from '../components/header';
 import { TableStyled, ButtonStyled } from '../constants/style/tableHome';
+import { Linear } from '../constants/style/linear';
 import { goToAdd, goToEditar, goToDetalhes } from '../routes/cordinator';
 import { ButtonNone} from '../constants/style/buttonNone'; 
 import {NomeInicio} from '../constants/style/renderizandoTela'
-import { PhoneService } from '../services/phone';
+
 
 
 const HomePage = () => {
@@ -20,11 +22,10 @@ const HomePage = () => {
     const [firstLoad, setFirstLoad] = useState(true)
     const [updateList, setUpdateList] = useState(false)
     const [listaCell, setListaCell] = useState([])
-    const [divListaCell, setDivListaCell] = useState(<div ><LinearProgress /></div>)
+    const [divListaCell, setDivListaCell] = useState(<Linear ><LinearProgress /></Linear>)
 
     const loadCellList = () => {
         if (firstLoad) {
-            console.log('Primeiro carregamento de página')
 
             PhoneService.getPhoneList()
             .then((phoneList) => {
@@ -38,7 +39,6 @@ const HomePage = () => {
             })
         }
         else if (updateList) {
-            console.log('Atualização de página')
             buildProductList();
             setUpdateList(false);
         }

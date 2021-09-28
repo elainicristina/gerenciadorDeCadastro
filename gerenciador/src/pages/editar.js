@@ -6,7 +6,7 @@ import { useHistory } from 'react-router';
 import { NomeInicio } from '../constants/style/renderizandoTela';
 import { ButtonHome } from '../constants/style/buttonNone';
 import Header from '../components/header';
-import { formatDate, getDateFromTimestamp, formatFromBrToUs } from '../utils/date';
+import { formatDate, getDateFromTimestamp } from '../utils/date';
 import { PhoneService } from '../services/phone';
 import { PhoneForm } from '../components/form';
 import { useForm } from 'react-hook-form';
@@ -44,7 +44,6 @@ const EditarPage = (props) => {
     }
 
     const onSubmit = (data) => {
-        console.log(data)
         editPhone(data);
     }
 
